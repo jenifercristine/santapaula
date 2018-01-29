@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 
  
  import {PROVIDERS,NATIVEPROVIDERS,MODULES,NATIVEMODULES} from './app.imports';
+import { ScannerProvider } from '../providers/scanner/scanner';
 @NgModule({
   declarations: [
     MyApp,
@@ -29,6 +30,7 @@ import { ListPage } from '../pages/list/list';
    PROVIDERS,
    NATIVEPROVIDERS,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ScannerProvider,
    
   ]
 })

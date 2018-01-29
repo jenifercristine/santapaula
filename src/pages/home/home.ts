@@ -50,7 +50,11 @@ chamaTelefones(){
 
 
 chamaAlert(){
-this.alert.presentAlertWithCallback("imagem","deseja acessar ?");
+this.alert.presentAlertWithCallback("imagem","deseja acessar ?")
+.then(res => {
+  // resposta da promise se for verdadeira chama cirurgia.
+  if (res) this.chamaCirurgias()
+});
 
 }
 }
